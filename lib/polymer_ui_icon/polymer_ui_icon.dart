@@ -35,6 +35,7 @@ import 'package:polymer_ui_elements/polymer_ui_iconset/polymer_ui_iconset.dart'
 class PolymerUiIcon extends PolymerUiThemeAware {
   PolymerUiIcon.created(): super.created() {
     _logger.finest('created');
+    print("created");
   }
 
   final _logger = new Logger('PolymerUiIcon');
@@ -91,7 +92,7 @@ class PolymerUiIcon extends PolymerUiThemeAware {
 
   void iconChanged(old) {
     _logger.finest('iconChanged');
-
+    print('iconChanged');
     updateIcon();
   }
 
@@ -123,7 +124,7 @@ class PolymerUiIcon extends PolymerUiThemeAware {
 
     var a = this.icon.split(':');
     var icon = a.removeAt(a.length - 1);
-
+    print("updateIcon: $icon");
     String n;
 
     if (a.length > 0) {
@@ -135,11 +136,14 @@ class PolymerUiIcon extends PolymerUiThemeAware {
     if (s != null) {
       var o = s.getOffset(icon, this.activeTheme);
       if (o != null) {
+        print('iconSet');
         var r = this.size / s.iconsize;
         this.style.backgroundImage = 'url(${s.src2})';
         this.style.backgroundPosition =
             '${-o['offsetx'] * r}px ${-o['offsety'] * r}px';
         this.style.backgroundSize = r == 1 ? 'auto' : '${s.width * r}px';
+      } else {
+        print('notIconSet');
       }
     }
   }
