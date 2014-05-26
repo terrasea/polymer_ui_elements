@@ -52,7 +52,7 @@ class PolymerUiToolbar extends PolymerUiThemeAware{
 
   void ready() {
     this.on['polymer-mediachange'].listen((CustomEvent e) {
-      queryMatches = e.detail['matches'];
+      queryMatches = e.detail.matches;
     });
     defaultTheme = 'polymer-ui-light-theme';
     responsiveWidthChanged(null);

@@ -1,5 +1,5 @@
 name: polymer_ui_elements
-version: 0.2.0-pre.8
+version: 0.2.0-pre.8.terrasea.1
 authors:
 - Günter Zöchbauer <guenter@gzoechbauer.com>
 - Erik Grimes <erik.grimes@gmail.com>
@@ -11,7 +11,7 @@ documentation: http://bwu-dart.github.io/polymer_elements/docs/index.html
 dependencies:
   polymer: '>=0.10.0-pre.10 <1.0.0'
   polymer_elements:
-    path: /home/terrasea/Projects/dart/polymer_elements
+    git: https://github.com/terrasea/polymer_elements.git
 dev_dependencies:
   unittest: '>=0.10.1+2 <1.0.0'
 transformers:
